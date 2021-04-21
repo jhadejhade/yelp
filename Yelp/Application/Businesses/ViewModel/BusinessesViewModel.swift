@@ -42,7 +42,7 @@ class BusinessesViewModel {
     
     func fetchBusinesses(location: String?, completion: @escaping () -> (), failure: @escaping (String) -> ()) {
         // prevent from calling the api again if user is still around the vicinity of the last location
-        guard lastLocation != location, businesses.isEmpty else {
+        guard lastLocation != location else {
             return
         }
         
