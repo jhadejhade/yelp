@@ -40,7 +40,7 @@ class BusinessesViewController: UIViewController {
         viewModel.startUpdatingLocation()
     }
     
-    private func getData(location: String) {
+    private func getData(location: String?) {
         activityIndicator.startAnimating()
         
         viewModel.fetchBusinesses(location: location) { [weak self] in
@@ -117,7 +117,7 @@ class BusinessesViewController: UIViewController {
     }
     
     @IBAction func retryTapped(_ sender: UIButton) {
-        getData(location: viewModel.lastLocation)
+        getData(location: viewModel.lastLocation.isEmpty ? "Philippines": viewModel.lastLocation)
     }
     
 }
