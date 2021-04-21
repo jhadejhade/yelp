@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Business Details View Controller-->
+        <scene sceneID="gBL-A1-ftc">
+            <objects>
+                <viewController storyboardIdentifier="BusinessDetailsViewController" id="5Km-Is-7t4" customClass="BusinessDetailsViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VAK-MQ-DGr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j22-bU-HrA">
+                                <rect key="frame" x="0.0" y="223" width="414" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kM7-KO-fRq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="179"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="FWg-df-9G3">
+                                <rect key="frame" x="0.0" y="438" width="414" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yub-2z-eaU">
+                                <rect key="frame" x="177" y="199.5" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="BfF-nf-wK8"/>
+                                    <constraint firstAttribute="height" constant="35" id="WjN-FJ-3WQ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="5">
+                                    <imageReference key="image" image="star" catalog="system" renderingMode="template"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Flu-DV-2jm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kM7-KO-fRq" firstAttribute="height" secondItem="VAK-MQ-DGr" secondAttribute="height" multiplier="0.2" id="0Wc-3d-PpE"/>
+                            <constraint firstItem="Flu-DV-2jm" firstAttribute="bottom" secondItem="j22-bU-HrA" secondAttribute="bottom" id="1qk-Ag-MPo"/>
+                            <constraint firstItem="yub-2z-eaU" firstAttribute="firstBaseline" secondItem="j22-bU-HrA" secondAttribute="firstBaseline" id="26u-VQ-hoE"/>
+                            <constraint firstItem="kM7-KO-fRq" firstAttribute="top" secondItem="Flu-DV-2jm" secondAttribute="top" id="2vy-4U-3RL"/>
+                            <constraint firstItem="j22-bU-HrA" firstAttribute="leading" secondItem="Flu-DV-2jm" secondAttribute="leading" id="375-Ou-nIf"/>
+                            <constraint firstItem="Flu-DV-2jm" firstAttribute="trailing" secondItem="kM7-KO-fRq" secondAttribute="trailing" id="MTN-3x-wBw"/>
+                            <constraint firstItem="Flu-DV-2jm" firstAttribute="trailing" secondItem="j22-bU-HrA" secondAttribute="trailing" id="fm5-ew-61b"/>
+                            <constraint firstItem="j22-bU-HrA" firstAttribute="top" secondItem="kM7-KO-fRq" secondAttribute="bottom" id="kaQ-W5-oTe"/>
+                            <constraint firstItem="yub-2z-eaU" firstAttribute="centerX" secondItem="VAK-MQ-DGr" secondAttribute="centerX" id="knz-19-cBC"/>
+                            <constraint firstItem="kM7-KO-fRq" firstAttribute="leading" secondItem="Flu-DV-2jm" secondAttribute="leading" id="oOW-va-8cZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activitiyIndicator" destination="FWg-df-9G3" id="wg1-JT-o8C"/>
+                        <outlet property="businessImage" destination="kM7-KO-fRq" id="Ei1-dz-Ays"/>
+                        <outlet property="ratingButton" destination="yub-2z-eaU" id="I2H-kk-Lhh"/>
+                        <outlet property="tableView" destination="j22-bU-HrA" id="Xtx-HA-gTM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzM-SI-G3L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-952" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

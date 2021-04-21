@@ -1,0 +1,6 @@
+framework module Pods_Yelp_YelpUITests {
+  umbrella header "Pods-Yelp-YelpUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,24 @@
+PODS:
+  - Cosmos (22.1.0)
+  - Kingfisher (6.0.0)
+  - TagListView (1.4.1)
+
+DEPENDENCIES:
+  - Cosmos (~> 22.1)
+  - Kingfisher
+  - TagListView (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - Kingfisher
+    - TagListView
+
+SPEC CHECKSUMS:
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
+  Kingfisher: 13f6e68c928eb50439b5cb2ea75d6035018438ea
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
+
+PODFILE CHECKSUM: c3c2c3aefefa53e70cfc397a2a7dd54121f7f498
+
+COCOAPODS: 1.10.0
